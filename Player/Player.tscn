@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c1y3iqdiwsm7f"]
+[gd_scene load_steps=26 format=3 uid="uid://c1y3iqdiwsm7f"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_xi87m"]
 [ext_resource type="Texture2D" uid="uid://crehara4rk1r4" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/spritesheets/player-hurt.png" id="2_p2mlc"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://cwehnegivp2ns" path="res://Sunny-land-files/Sunny-land-assets-files/PNG/sprites/player/run/player-run-6.png" id="14_ces6j"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_id62i"]
+radius = 5.0
+height = 18.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1mfap"]
 atlas = ExtResource("2_p2mlc")
@@ -51,7 +53,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_k6nsu")
 }],
-"loop": true,
+"loop": false,
 "name": &"Idle",
 "speed": 5.0
 }, {
@@ -90,12 +92,70 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Animation" id="Animation_wf7ds"]
-resource_name = "Idle"
+[sub_resource type="Animation" id="Animation_fohio"]
+resource_name = "Run"
+length = 0.55
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimatedSprite2D:animation")
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Run"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_etbyu"]
+resource_name = "Jump"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Jump"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_onmdx"]
+resource_name = "Idle"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -107,7 +167,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../AnimatedSprite2D:frame")
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -117,21 +177,15 @@ tracks/1/keys = {
 "values": [0, 1, 2, 3]
 }
 
-[sub_resource type="Animation" id="Animation_psseq"]
-resource_name = "Jump"
-
-[sub_resource type="Animation" id="Animation_ld6x1"]
-resource_name = "Run"
-
-[sub_resource type="Animation" id="Animation_cehlh"]
+[sub_resource type="Animation" id="Animation_m5gcm"]
 resource_name = "Death"
 
-[sub_resource type="Animation" id="Animation_h5j8u"]
+[sub_resource type="Animation" id="Animation_5767w"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimatedSprite2D:frame")
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -141,31 +195,63 @@ tracks/0/keys = {
 "values": [1]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_0qihx"]
+[sub_resource type="Animation" id="Animation_jouek"]
+resource_name = "Fall"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Jump"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wyqpw"]
 _data = {
-"Death": SubResource("Animation_cehlh"),
-"Idle": SubResource("Animation_wf7ds"),
-"Jump": SubResource("Animation_psseq"),
-"RESET": SubResource("Animation_h5j8u"),
-"Run": SubResource("Animation_ld6x1")
+"Death": SubResource("Animation_m5gcm"),
+"Fall": SubResource("Animation_jouek"),
+"Idle": SubResource("Animation_onmdx"),
+"Jump": SubResource("Animation_etbyu"),
+"RESET": SubResource("Animation_5767w"),
+"Run": SubResource("Animation_fohio")
 }
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_xi87m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 7)
 shape = SubResource("CapsuleShape2D_id62i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kcxy6")
 animation = &"Idle"
 frame = 1
+metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.6, 1.6)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Camera2D")
+autoplay = "Idle"
 libraries = {
-"": SubResource("AnimationLibrary_0qihx")
+"": SubResource("AnimationLibrary_wyqpw")
 }
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
