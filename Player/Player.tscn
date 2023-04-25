@@ -241,9 +241,8 @@ shape = SubResource("CapsuleShape2D_id62i")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kcxy6")
-animation = &"Idle"
+animation = &"Jump"
 frame = 1
-metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.6, 1.6)
