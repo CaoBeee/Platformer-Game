@@ -425,16 +425,42 @@ texture = ExtResource("2_j6egs")
 [node name="Player" type="Node2D" parent="."]
 
 [node name="Player" parent="Player" instance=ExtResource("1_0wbao")]
-position = Vector2(514, 148)
+position = Vector2(478, 251)
 
 [node name="Mobs" type="Node2D" parent="."]
 
 [node name="Frog" parent="Mobs" instance=ExtResource("5_my3io")]
-position = Vector2(401, 265)
+position = Vector2(246, 226)
+
+[node name="Frog8" parent="Mobs" instance=ExtResource("5_my3io")]
+position = Vector2(138, 87)
+
+[node name="Frog2" parent="Mobs" instance=ExtResource("5_my3io")]
+position = Vector2(686, 221)
+
+[node name="Frog3" parent="Mobs" instance=ExtResource("5_my3io")]
+position = Vector2(663, 59)
+
+[node name="Frog4" parent="Mobs" instance=ExtResource("5_my3io")]
+position = Vector2(334, 95)
+
+[node name="Frog5" parent="Mobs" instance=ExtResource("5_my3io")]
+position = Vector2(837, 94)
+
+[node name="Frog6" parent="Mobs" instance=ExtResource("5_my3io")]
+position = Vector2(715, 140)
+
+[node name="Frog7" parent="Mobs" instance=ExtResource("5_my3io")]
+position = Vector2(145, 243)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Hp" type="Label" parent="UI"]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 47.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "HP"
 script = ExtResource("6_f3afk")
