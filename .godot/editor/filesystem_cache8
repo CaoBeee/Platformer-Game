@@ -1,14 +1,17 @@
 2a60927148abd1d33b818b535e306557
-::res://::1682395675
+::res://::1682399791
+BG.gd::GDScript::-1::1682393614::0::1::::<>ParallaxBackground<>::
+BG.tscn::PackedScene::5659823495381008850::1682399651::0::1::::<><>::uid://bft3elpttk6q6<>res://BG.gd<>uid://creybe66260ai<>uid://c58jcwjy4x7di
+Frog.gd::GDScript::-1::1682399649::0::1::::<>CharacterBody2D<>::
+Frog.tscn::PackedScene::1807917912275718150::1682399681::0::1::::<><>::res://Frog.gd<>uid://bq4fw0yccvqnv<>uid://cssfotjgr1b82<>uid://bgt74fnvvpy1l
 icon.svg::CompressedTexture2D::5407238894787825574::1682200734::1682200739::1::::<><>::
 main.gd::GDScript::-1::1682202751::0::1::::<>Node2D<>::
-main.tscn::PackedScene::6187564837330186524::1682395611::0::1::::<><>::res://main.gd<>uid://cmvwp307tmo3s
-BG.tscn::PackedScene::5659823495381008850::1682395611::0::1::::<><>::uid://bft3elpttk6q6<>res://BG.gd<>uid://creybe66260ai<>uid://c58jcwjy4x7di
-BG.gd::GDScript::-1::1682393614::0::1::::<>ParallaxBackground<>::
-world.tscn::PackedScene::3561497712778558710::1682395675::0::1::::<><>::uid://c1y3iqdiwsm7f<>uid://53fjvg86bc6x<>res://BG.gd<>uid://bft3elpttk6q6
-::res://Player/::1682395611
-Player.gd::GDScript::-1::1682392764::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::6649011575622799653::1682395611::0::1::::<><>::res://Player/Player.gd<>uid://crehara4rk1r4<>uid://doynh0y8w1p8c<>uid://bqxsff6kmoesf<>uid://cl23mru66b5a<>uid://dlspmx4hm0dv0<>uid://bwnm2h31qrpp2<>uid://xuxfpmufuske<>uid://0pyuti7mxlxk<>uid://b65lxbdu3uxan<>uid://cpl6336omgcp7<>uid://mblxb26bhy21<>uid://bon7nf8m3d3cx<>uid://cwehnegivp2ns
+main.tscn::PackedScene::6187564837330186524::1682399651::0::1::::<><>::res://main.gd<>uid://cmvwp307tmo3s
+Hp.gd::GDScript::-1::1682399791::0::1::::<>Label<>::
+world.tscn::PackedScene::3561497712778558710::1682399791::0::1::::<><>::uid://c1y3iqdiwsm7f<>uid://53fjvg86bc6x<>res://BG.gd<>uid://bft3elpttk6q6<>uid://001e5k4oy8ra<>res://Hp.gd
+::res://Player/::1682399791
+Player.gd::GDScript::-1::1682399791::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::6649011575622799653::1682399651::0::1::::<><>::res://Player/Player.gd<>uid://crehara4rk1r4<>uid://doynh0y8w1p8c<>uid://bqxsff6kmoesf<>uid://cl23mru66b5a<>uid://dlspmx4hm0dv0<>uid://bwnm2h31qrpp2<>uid://xuxfpmufuske<>uid://0pyuti7mxlxk<>uid://b65lxbdu3uxan<>uid://cpl6336omgcp7<>uid://mblxb26bhy21<>uid://bon7nf8m3d3cx<>uid://cwehnegivp2ns
 ::res://Sunny Land houses/::1682203187
 ::res://Sunny Land houses/Sunny Land Trees Props Pack/::1682203187
 public-license.txt::TextFile::-1::1682203187::0::1::::<><>::
